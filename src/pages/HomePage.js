@@ -1,15 +1,17 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import {
     companyInfoList,
     lastestNewList,
 } from '../utils/constants';
-
 import Header from '../layout/Header';
 import Banner from '../components/Banner';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import slugify from 'slugify';
 import Card from '../components/Card';
+import Button from '../components/Button';
+import Footer from '../layout/Footer';
+import NewsletterSubscription from '../components/NewsletterSubscription';
 
 const HomePage = () => {
     const navigate = useNavigate();
@@ -20,11 +22,6 @@ const HomePage = () => {
             <Header></Header>
             {/* Big banner */}
             <Banner
-                onClick={() =>
-                    navigate(
-                        '/Software fueling digital marketing',
-                    )
-                }
                 className={'h-[640px]'}
                 imgUrl={'/banner-img.png'}
                 title={'Software fueling digital marketing'}
@@ -158,7 +155,11 @@ const HomePage = () => {
                     ></Card>
                 </div>
             </div>
-            <div className="bg-primary h-40"></div>
+
+            {/* Newsletter subscription */}
+            <NewsletterSubscription></NewsletterSubscription>
+            {/* Footer */}
+            <Footer></Footer>
         </div>
     );
 };

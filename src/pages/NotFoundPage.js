@@ -2,6 +2,8 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import Button from '../components/Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 const NotFoundPageStyles = styled.div`
     height: 100vh;
     display: flex;
@@ -18,7 +20,7 @@ const NotFoundPageStyles = styled.div`
         margin-bottom: 40px;
     }
     .heading {
-        font-size: 60px;
+        font-size: 48px;
         font-weight: bold;
         margin-bottom: 20px;
     }
@@ -38,21 +40,37 @@ const NotFoundPage = () => {
         <NotFoundPageStyles>
             <div className="page-content">
                 <img
-                    src="/404.jpg"
+                    src="/404.png"
                     alt="notfound"
                     className="image"
                 />
-                <h1 className="heading">
-                    404 - Looks like you're lost.
-                </h1>
-                <p className="description">
-                    Maybe this page used to exist or you
-                    just spelled something wrong. Chances
-                    are your spelled something wrong, so can
-                    you double check the URL?
+                <h1 className="heading">Whoops</h1>
+                <p className="description w-72">
+                    We searched near and far, but we
+                    couldn't find the page you were looking
+                    for.
                 </p>
-                <Button onClick={() => navigate('/')}>
-                    Go Back
+                <Button
+                    onClick={() => navigate(-1)}
+                    className={
+                        'mr-8 rounded-3xl font-normal'
+                    }
+                >
+                    Go back to the previous page{' '}
+                    <FontAwesomeIcon
+                        icon={faChevronRight}
+                        className="fa-xs ml-1"
+                    ></FontAwesomeIcon>
+                </Button>
+                <Button
+                    onClick={() => navigate('/')}
+                    className={'rounded-3xl font-normal'}
+                >
+                    Go back to the home page{' '}
+                    <FontAwesomeIcon
+                        icon={faChevronRight}
+                        className="fa-xs ml-1"
+                    ></FontAwesomeIcon>
                 </Button>
             </div>
         </NotFoundPageStyles>

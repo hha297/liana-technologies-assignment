@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from './Button';
 import { useNavigate } from 'react-router-dom';
+import slugify from 'slugify';
 
 const Banner = ({
     imgUrl,
@@ -25,9 +26,7 @@ const Banner = ({
                     {showButton && ( // Kiểm tra showButton trước khi hiển thị Button
                         <Button
                             onClick={() =>
-                                navigate(
-                                    '/software-fueling-digital-marketing',
-                                )
+                                navigate(slugify(title))
                             }
                             className={'font-normal'}
                         >

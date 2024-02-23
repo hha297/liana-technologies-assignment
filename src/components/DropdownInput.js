@@ -19,7 +19,7 @@ function DropdownInput() {
                 className="block appearance-none w-full bg-white border border-gray-100 hover:border-gray-500 px-3 py-2 rounded shadow leading-tight focus:outline-none focus:border-gray-500"
             >
                 <option
-                    value=""
+                    value="selectlanguage"
                     disabled
                     className="text-gray-400"
                 >
