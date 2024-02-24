@@ -6,6 +6,7 @@ const Card = ({
     href,
     onClick,
     description,
+    className,
 }) => {
     return (
         <a
@@ -13,12 +14,12 @@ const Card = ({
             onClick={onClick}
             className="flex flex-col cursor-pointer rounded-lg border border-gray-300 max-h-96 w-1/2 overflow-hidden shadow-lg mb-20"
         >
-            <div>
-                <div className="w-full h-48 border-b mx-auto my-8 border-b-gray-300">
+            <div className="">
+                <div className="w-full h-48 border-b mx-auto  border-b-gray-300">
                     <img
                         src={imgUrl}
                         alt=""
-                        className="h-40 mx-auto"
+                        className={`h-48 mx-auto ${className}`}
                     />
                 </div>
                 <div className="flex flex-col p-4 items-center">

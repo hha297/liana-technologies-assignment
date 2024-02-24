@@ -58,7 +58,7 @@ const HomePage = () => {
                 ></Banner>
             </div>
             {/* Company Info */}
-            <div className="flex flex-row w-2/5 mx-auto mb-10 justify-between items-start space-x-4">
+            <div className="flex flex-row w-2/5 mx-auto mb-10 justify-between items-start">
                 {Object.values(companyInfoList).map(
                     (item, index) => (
                         <div
@@ -134,6 +134,7 @@ const HomePage = () => {
                             'The Body Shop is a global beauty brand and it has more than 3,000 stores in more than 60 countries.'
                         }
                         href={'https://www.thebodyshop.fi/'}
+                        className={'h-32 py-10'}
                     ></Card>
                     <Card
                         imgUrl={'/lapland-hotel.png'}
