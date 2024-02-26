@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import {
     companyInfoList,
@@ -134,7 +134,7 @@ const HomePage = () => {
                             'The Body Shop is a global beauty brand and it has more than 3,000 stores in more than 60 countries.'
                         }
                         href={'https://www.thebodyshop.fi/'}
-                        className={'h-32 py-10'}
+                        className={'h-48 py-10'}
                     ></Card>
                     <Card
                         imgUrl={'/lapland-hotel.png'}

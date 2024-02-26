@@ -1,9 +1,14 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import {
+    useLocation,
+    useNavigate,
+    useParams,
+} from 'react-router-dom';
 import styled from 'styled-components';
 import Button from '../components/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { Helmet } from 'react-helmet';
 const NotFoundPageStyles = styled.div`
     height: 100vh;
     display: flex;
