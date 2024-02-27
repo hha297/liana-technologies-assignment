@@ -9,7 +9,7 @@ import Banner from '../components/Banner';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import slugify from 'slugify';
 import Card from '../components/Card';
-import Button from '../components/Button';
+
 import Footer from '../layout/Footer';
 import NewsletterSubscription from '../components/NewsletterSubscription';
 

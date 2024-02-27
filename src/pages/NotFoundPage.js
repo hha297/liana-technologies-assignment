@@ -55,28 +55,32 @@ const NotFoundPage = () => {
                     couldn't find the page you were looking
                     for.
                 </p>
-                <Button
-                    onClick={() => navigate(-1)}
-                    className={
-                        'mr-8 rounded-3xl font-normal'
-                    }
-                >
-                    Go back to the previous page{' '}
-                    <FontAwesomeIcon
-                        icon={faChevronRight}
-                        className="fa-xs ml-1"
-                    ></FontAwesomeIcon>
-                </Button>
-                <Button
-                    onClick={() => navigate('/')}
-                    className={'rounded-3xl font-normal'}
-                >
-                    Go back to the home page{' '}
-                    <FontAwesomeIcon
-                        icon={faChevronRight}
-                        className="fa-xs ml-1"
-                    ></FontAwesomeIcon>
-                </Button>
+                <div className="sm-max:flex sm-max:flex-col sm-max:w-1/2 sm-max:mx-auto sm-max:gap-y-2">
+                    <Button
+                        onClick={() => navigate(-1)}
+                        className={
+                            'mr-8 sm-max:mr-0 rounded-3xl font-normal'
+                        }
+                    >
+                        Go back to the previous page{' '}
+                        <FontAwesomeIcon
+                            icon={faChevronRight}
+                            className="fa-xs ml-1"
+                        ></FontAwesomeIcon>
+                    </Button>
+                    <Button
+                        onClick={() => navigate('/')}
+                        className={
+                            'rounded-3xl font-normal'
+                        }
+                    >
+                        Go back to the home page{' '}
+                        <FontAwesomeIcon
+                            icon={faChevronRight}
+                            className="fa-xs ml-1"
+                        ></FontAwesomeIcon>
+                    </Button>
+                </div>
             </div>
         </NotFoundPageStyles>
     );
