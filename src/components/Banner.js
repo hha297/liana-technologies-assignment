@@ -9,7 +9,14 @@ const Banner = ({
     showButton,
     className,
     onClick,
+    //type to distinguish whether banner size is large or small
+    size,
 }) => {
+    let textClass = '';
+    if (size === 'small') {
+        textClass =
+            'xl-max:text-4xl lg-max:text-3xl md-max:text-2xl sm-max:text-xl'; // Check banner size, if it is small banner, change the font size
+    }
     const navigate = useNavigate();
     return (
         <div onClick={onClick}>
@@ -20,7 +27,9 @@ const Banner = ({
                     className={`${className} w-full opacity-90 object-cover bg-center bg-no-repeat bg-cover`}
                 />
                 <div className="absolute flex flex-col justify-center items-center top-0 left-0 right-0 bottom-0 text-white">
-                    <div className="text-center mb-6 text-5xl font-thin">
+                    <div
+                        className={`${textClass} text-center mb-6 text-5xl font-thin lg-max:text-4xl sm-max:text-3xl mb-max:text-2xl`}
+                    >
                         {title}
                     </div>
                     {showButton && ( // Kiểm tra showButton trước khi hiển thị Button

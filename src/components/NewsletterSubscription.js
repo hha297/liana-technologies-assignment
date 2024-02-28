@@ -25,10 +25,10 @@ const NewsletterSubscription = () => {
 
     return (
         <div className="border-t border-gray-300 flex flex-col items-center pt-10 py-6">
-            <h1 className="font-bold text-2xl">
+            <h1 className="font-bold text-2xl md-max:text-xl">
                 Subscribe to our newsletter
             </h1>
-            <p className="text-center my-4">
+            <p className="text-center my-4 mx-8">
                 Follow our story and get the latest
                 promotional news about our products and
                 events.

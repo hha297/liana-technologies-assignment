@@ -89,7 +89,7 @@ const Header = () => {
                     ></DropdownInput>
                 </div>
             </div>
-            <div className="w-4/5 h-28 mx-auto flex mb-max:flex-col mb-max:mt-10 mb-max:mb-16 mb-max:mx-auto mb-max:gap-y-8 justify-between text-gray-500 items-center">
+            <div className="w-4/5 h-28 mx-auto flex mb-max:flex-col mb-max:mt-8 mb-max:mb-12 mb-max:mx-auto mb-max:gap-y-8 justify-between text-gray-500 items-center">
                 <div className="flex flex-row items-center">
                     <img
                         src="/liana-logo.png"
