@@ -44,7 +44,7 @@ const HomePage = () => {
                 <Banner
                     onClick={() => navigate('/products')}
                     className={
-                        'h-[33%] w-[100%] rounded-lg md-max:w-[100%] md-max:h-40 xl-max:text-3xl'
+                        'h-[33%] w-[100%] rounded-lg md-max:w-[100%] md-max:h-32 xl-max:text-3xl'
                     }
                     imgUrl={'/banner-img.png'}
                     title={'Products'}
@@ -54,7 +54,7 @@ const HomePage = () => {
                 <Banner
                     onClick={() => navigate('/contact')}
                     className={
-                        'h-[33%] w-[100%] md-max:w-[100%] md-max:h-40 rounded-lg xl-max:text-3xl'
+                        'h-[33%] w-[100%] md-max:w-[100%] md-max:h-32 rounded-lg xl-max:text-3xl'
                     }
                     imgUrl={'/banner-img.png'}
                     title={'Contact Us'}

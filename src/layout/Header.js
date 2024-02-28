@@ -144,7 +144,7 @@ const Header = () => {
                         {windowWidth <= 1040 ? (
                             <FontAwesomeIcon
                                 icon={faMagnifyingGlass}
-                                className="absolute right-0 top-0 mt-[1px] mr-[12px] cursor-pointer bg-primary text-white px-4 py-[14px] rounded-tr-lg rounded-br-lg"
+                                className="absolute right-0 top-0 mt-[0.4px] mr-[12px] cursor-pointer bg-primary text-white px-4 py-[14.6px] rounded-tr-lg rounded-br-lg"
                                 onClick={handleSearch}
                             />
                         ) : (

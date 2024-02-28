@@ -28,7 +28,7 @@ const Banner = ({
                 />
                 <div className="absolute flex flex-col justify-center items-center top-0 left-0 right-0 bottom-0 text-white">
                     <div
-                        className={`${textClass} text-center mb-6 text-5xl font-thin lg-max:text-4xl sm-max:text-3xl mb-max:text-2xl`}
+                        className={`${textClass} text-center mb-6 mt-4 text-5xl font-thin lg-max:text-4xl sm-max:text-3xl mb-max:text-2xl`}
                     >
                         {title}
                     </div>
