@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import {
     companyInfoList,
@@ -12,9 +12,43 @@ import Card from '../components/Card';
 
 import Footer from '../layout/Footer';
 import NewsletterSubscription from '../components/NewsletterSubscription';
+import CountUp from 'react-countup';
 
 const HomePage = () => {
     const navigate = useNavigate();
+
+    const [updatedCompanyInfo, setUpdatedCompanyInfo] =
+        useState({ ...companyInfoList });
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            console.log(Math.random());
+            // Automatically increase each second for animated test
+            setUpdatedCompanyInfo((prevCompanyInfo) => ({
+                ...prevCompanyInfo,
+                clients: {
+                    ...prevCompanyInfo.clients,
+                    number:
+                        prevCompanyInfo.clients.number +
+                        Math.random() * 10,
+                },
+                employees: {
+                    ...prevCompanyInfo.employees,
+                    number:
+                        prevCompanyInfo.employees.number +
+                        Math.random(),
+                },
+                dailyUsers: {
+                    ...prevCompanyInfo.dailyUsers,
+                    number:
+                        prevCompanyInfo.dailyUsers.number +
+                        Math.random() * 20,
+                },
+            }));
+        }, 1000); // Updated Each Second
+
+        return () => clearInterval(interval); // Clear Interval on unmount
+    }, []);
 
     return (
         <div className="container">
@@ -64,19 +98,24 @@ const HomePage = () => {
             </div>
             {/* Company Info */}
             <div className="flex flex-row md-max:flex-col md-max:items-center md-max:justify-center md-max:text-center w-1/2 mx-auto mb-10 justify-between items-start xl-max:w-2/3">
-                {Object.values(companyInfoList).map(
-                    (item, index) => (
+                {Object.entries(updatedCompanyInfo).map(
+                    ([key, item], index) => (
                         <div
                             key={index}
                             className={`flex flex-row justify-center text-center items-center h-20 xl-max:w-full`}
                         >
                             <FontAwesomeIcon
                                 icon={item.icon}
-                                className={`text-primary text-4xl xl-max:text-3xl lg-max:text-2xl `}
+                                className={`text-primary text-4xl xl-max:text-3xl lg-max:text-2xl`}
                             />
-                            <div className="flex flex-col ml-6 xl-max:ml-4 md-max:ml-8">
-                                <div className="text-black text-4xl  xl-max:text-3xl lg-max:text-2xl">
-                                    {item.number}
+                            <div className="flex flex-col ml-6  number-animation xl-max:ml-4 md-max:ml-8">
+                                <div className="text-black text-4xl xl-max:text-3xl lg-max:text-2xl">
+                                    <CountUp
+                                        start={item.number}
+                                        end={NaN}
+                                        duration={2}
+                                        className="number-animation"
+                                    />
                                 </div>
                                 <div className="text-black text-sm lg-max:text-[12px]">
                                     {item.title}

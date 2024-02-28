@@ -64,6 +64,7 @@ const Header = () => {
         // Search
         alert(`You have searched for: ${searchValue}`);
     };
+
     return (
         <div>
             <div className="w-full h-20 bg-primary">
@@ -138,6 +139,7 @@ const Header = () => {
                             type="text"
                             value={searchValue}
                             onChange={handleInputChange}
+                            S
                             className="block appearance-none w-full mr-3 bg-white border border-gray-300 px-3 py-2 lg-max:pr-14 rounded-lg shadow leading-tight focus:outline-none lg-max:py-3 focus:border-gray-500"
                         />
 
